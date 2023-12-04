@@ -21,31 +21,33 @@
                         <div class="mb-5 text-center">
                                 <h2 class="text-white">CALCOLA IL PREZZO DEL TUO BIGLIETTO</h2>
                                 <div class="container w-75 m-auto bg-white rounded-2" id="priceCalculator">
-                                        <div class="row p-3 justify-content-around">
-                                                <div class="col">
-                                                        <div class="pink-color fw-medium">Nome Cognome</div>
-                                                        <div>
-                                                                <input type="text">
+                                        <form>
+                                                <div class="row p-3 justify-content-around">
+                                                        <div class="col">
+                                                                <div class="pink-color fw-medium">Nome Cognome</div>
+                                                                <div>
+                                                                        <input type="text" placeholder="Inserisci nome e cognome..." required>
+                                                                </div>
+                                                        </div>
+                        
+                                                        <div class="col">
+                                                                <div class="pink-color fw-medium">Km da percorrere</div>
+                                                                <div>
+                                                                        <input type="text" placeholder="Inserisci i Km da percorrere" required>
+                                                                </div>
+                                                        </div>
+                        
+                                                        <div class="col">
+                                                                <div class="pink-color fw-medium">Fascia d'età</div>
+                                                                <div>
+                                                                        <select name="min-mag" id="min-mag">
+                                                                                <option value="maggiorenne">Maggiorenne</option>
+                                                                                <option value="minorenne">Minorenne</option>
+                                                                        </select>
+                                                                </div>
                                                         </div>
                                                 </div>
-                
-                                                <div class="col">
-                                                        <div class="pink-color fw-medium">Km da percorrere</div>
-                                                        <div>
-                                                                <input type="text">
-                                                        </div>
-                                                </div>
-                
-                                                <div class="col">
-                                                        <div class="pink-color fw-medium">Fascia d'età</div>
-                                                        <div>
-                                                                <select name="min-mag" id="min-mag">
-                                                                        <option value="maggiorenne">Maggiorenne</option>
-                                                                        <option value="minorenne">Minorenne</option>
-                                                                </select>
-                                                        </div>
-                                                </div>
-                                        </div>
+                                        </form>
 
                                         <div class="row justify-content-center">
                                                 <div class="col-auto">
