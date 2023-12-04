@@ -13,12 +13,12 @@ const sendButton = document.getElementById('send-button')
 
 sendButton.addEventListener ('click', function() {
     const nameValue = document.getElementById ('name').value;
+    document.getElementById('namePassenger').innerHTML = nameValue;
 
     const kmValue = document.getElementById ('km').value;
     const kmInNumber = parseInt (kmValue);
 
     const ageValue = document.getElementById('age').value;
-
 
     console.log('nome', nameValue, typeof nameValue);
     console.log('km', kmInNumber, typeof kmInNumber);
@@ -27,13 +27,24 @@ sendButton.addEventListener ('click', function() {
     let price = (kmInNumber * 0.21);
     console.log('price', price, typeof price);
 
+    let ticket = document.getElementById ('ticket')
+    console.log('ticket ', ticket, typeof ticket);
+
     if (ageValue == 'minorenne') {
         price *= 0.8;
+        ticket.innerHTML = 'Biglietto 20% - sconto minorenni'
     }
 
     else if (ageValue == 'over-65') {
         price *= 0.6;
+        ticket.innerHTML = 'Biglietto 40% - sconto Over65'
     }
+
+    document.getElementById('carriage').innerHTML = Math.floor(Math.random() * 101);
+
+    let cap = document.getElementById('cap').value;
+
+    document.getElementById('myCap').innerHTML = cap;
 
     price = price.toFixed(2) + '€';
 
@@ -42,7 +53,7 @@ sendButton.addEventListener ('click', function() {
     result.innerHTML = price;
 })
 
-const resetButton = document.getElementById('reset')
+const resetButton = document.getElementById('reset');
 
 resetButton.addEventListener ('click', function() {
     document.getElementById('name').value = ''

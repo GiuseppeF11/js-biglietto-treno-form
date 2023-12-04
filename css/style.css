@@ -24,3 +24,9 @@
 #ticket-box {
     min-height: 150px;
 }
+
+button {
+    border-radius: 30px;
+    padding: 2px 10px;
+}
+/* MAIN */
