@@ -7,12 +7,20 @@
 
 /* GENERAL */
 
+.bg-pink {
+    background-color: #B91450;
+}
 
+/* UTILITY */
 
-/* HEADER */
+.pink-color {
+    color: #B91450;
+}
 
+#priceCalculator {
+    min-height: 150px;
+}
 
-/* MAIN */
-
-
-/* FOOTER */
+#ticket-box {
+    min-height: 150px;
+}
