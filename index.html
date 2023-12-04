@@ -26,23 +26,24 @@
                                                         <div class="col">
                                                                 <div class="pink-color fw-medium">Nome Cognome</div>
                                                                 <div>
-                                                                        <input type="text" placeholder="Inserisci nome e cognome..." required>
+                                                                        <input type="text" id="name" placeholder="Inserisci nome e cognome..." required>
                                                                 </div>
                                                         </div>
                         
                                                         <div class="col">
                                                                 <div class="pink-color fw-medium">Km da percorrere</div>
                                                                 <div>
-                                                                        <input type="text" placeholder="Inserisci i Km da percorrere" required>
+                                                                        <input type="text" id="km" placeholder="Inserisci i Km da percorrere" required>
                                                                 </div>
                                                         </div>
                         
                                                         <div class="col">
                                                                 <div class="pink-color fw-medium">Fascia d'età</div>
                                                                 <div>
-                                                                        <select name="min-mag" id="min-mag">
+                                                                        <select name="min-mag" id="age">
+                                                                                <option value="minorenne">Under 18</option>
                                                                                 <option value="maggiorenne">Maggiorenne</option>
-                                                                                <option value="minorenne">Minorenne</option>
+                                                                                <option value="over-65">Over 65</option>
                                                                         </select>
                                                                 </div>
                                                         </div>
@@ -51,10 +52,10 @@
 
                                         <div class="row justify-content-center">
                                                 <div class="col-auto">
-                                                        <button>Genera</button>
+                                                        <button type="button" id="send-button">Genera</button>
                                                 </div>
                                                 <div class="col-auto">
-                                                        <button>Annulla</button>
+                                                        <button type="button" id="reset">Svuota</button>
                                                 </div>
                                         </div>
                                 </div>
@@ -89,7 +90,7 @@
 
                                                                 <div class="col-auto d-flex flex-column justify-content-around">
                                                                         <div class="fw-bold">Costo biglietto</div>
-                                                                        <div>2.10€</div>
+                                                                        <div id="final-price">0.00€</div>
                                                                 </div>
                                                         </div>
                                                 </div>
