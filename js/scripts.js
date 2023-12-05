@@ -40,6 +40,10 @@ sendButton.addEventListener ('click', function() {
         ticket.innerHTML = 'Biglietto 40% - sconto Over65'
     }
 
+    else if (ageValue == 'maggiorenne') {
+        ticket.innerHTML = 'Biglietto Standard'
+    }
+
     document.getElementById('carriage').innerHTML = Math.floor(Math.random() * 101);
 
     let cap = document.getElementById('cap').value;
