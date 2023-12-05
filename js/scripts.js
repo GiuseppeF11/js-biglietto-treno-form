@@ -30,31 +30,37 @@ sendButton.addEventListener ('click', function() {
     let ticket = document.getElementById ('ticket')
     console.log('ticket ', ticket, typeof ticket);
 
-    if (ageValue == 'minorenne') {
-        price *= 0.8;
-        ticket.innerHTML = 'Biglietto 20% - sconto minorenni'
-    }
-
-    else if (ageValue == 'over-65') {
-        price *= 0.6;
-        ticket.innerHTML = 'Biglietto 40% - sconto Over65'
-    }
-
-    else if (ageValue == 'maggiorenne') {
-        ticket.innerHTML = 'Biglietto Standard'
-    }
-
-    document.getElementById('carriage').innerHTML = Math.floor(Math.random() * 101);
-
     let cap = document.getElementById('cap').value;
-
+    
     document.getElementById('myCap').innerHTML = cap;
 
-    price = price.toFixed(2) + '€';
+    if (!isNaN(kmInNumber && cap)) {
+        if (ageValue == 'minorenne') {
+            price *= 0.8;
+            ticket.innerHTML = 'Biglietto 20% - sconto minorenni'
+        }
+    
+        else if (ageValue == 'over-65') {
+            price *= 0.6;
+            ticket.innerHTML = 'Biglietto 40% - sconto Over65'
+        }
+    
+        else if (ageValue == 'maggiorenne') {
+            ticket.innerHTML = 'Biglietto Standard'
+        }
+    
+        document.getElementById('carriage').innerHTML = Math.floor(Math.random() * 101);
+    
+        price = price.toFixed(2) + '€';
+    
+        const result = document.querySelector('#final-price');
+    
+        result.innerHTML = price;
+    }
 
-    const result = document.querySelector('#final-price');
-
-    result.innerHTML = price;
+    else {
+        alert('Inserisci cifre valide per i Km ed il Cap')
+    }
 })
 
 const resetButton = document.getElementById('reset');
